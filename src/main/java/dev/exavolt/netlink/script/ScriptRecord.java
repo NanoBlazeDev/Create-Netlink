@@ -9,6 +9,8 @@ public final class ScriptRecord {
 	public String name;
 	public String code;
 	public boolean enabled;
+	/** UUID of the player who last changed or started the code; "" for scripts saved before this was tracked. */
+	public String author = "";
 
 	public ScriptRecord(String id, String name, String code, boolean enabled) {
 		this.id = id;
@@ -17,10 +19,16 @@ public final class ScriptRecord {
 		this.enabled = enabled;
 	}
 
+	private ScriptRecord(String id, String name, String code, boolean enabled, String author) {
+		this(id, name, code, enabled);
+		this.author = author;
+	}
+
 	public static final Codec<ScriptRecord> CODEC = RecordCodecBuilder.create(i -> i.group(
 		Codec.STRING.fieldOf("id").forGetter(r -> r.id),
 		Codec.STRING.fieldOf("name").forGetter(r -> r.name),
 		Codec.STRING.fieldOf("code").forGetter(r -> r.code),
-		Codec.BOOL.optionalFieldOf("enabled", false).forGetter(r -> r.enabled)
+		Codec.BOOL.optionalFieldOf("enabled", false).forGetter(r -> r.enabled),
+		Codec.STRING.optionalFieldOf("author", "").forGetter(r -> r.author)
 	).apply(i, ScriptRecord::new));
 }

@@ -153,6 +153,13 @@ public class CodeEditor extends AbstractWidget {
 	}
 
 	private void replace(int from, int to, String with) {
+		int room = dev.exavolt.netlink.net.NetlinkPackets.MAX_CODE - (text.length() - (to - from));
+		if (with.length() > room) {
+			if (room <= 0 && from == to) {
+				return;
+			}
+			with = with.substring(0, Math.max(0, room));
+		}
 		snapshot();
 		text = text.substring(0, from) + with + text.substring(to);
 		cursor = from + with.length();

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | default: site.title }}</title>
+<style>
+:root { --bg:#fafafa; --fg:#1d1f23; --muted:#5c6370; --card:#fff; --line:#e3e5e8; --accent:#2b7bb9; --code:#f1f3f5; }
+@media (prefers-color-scheme: dark) { :root { --bg:#16181c; --fg:#e6e6e6; --muted:#9aa0a8; --card:#1e2127; --line:#2d313a; --accent:#6cb6ff; --code:#262a31; } }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+main { max-width:900px; margin:0 auto; padding:32px 16px 80px; }
+h1,h2,h3,h4 { line-height:1.25; margin:1.8em 0 .6em; }
+h1 { font-size:2.1em; margin-top:.3em; } h2 { border-bottom:1px solid var(--line); padding-bottom:.3em; }
+a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+code { background:var(--code); padding:.15em .35em; border-radius:4px; font:0.9em ui-monospace,Consolas,monospace; }
+pre { background:var(--code); padding:14px 16px; border-radius:8px; overflow-x:auto; }
+pre code { background:none; padding:0; }
+table { border-collapse:collapse; display:block; overflow-x:auto; margin:1em 0; }
+th,td { border:1px solid var(--line); padding:6px 10px; text-align:left; vertical-align:top; }
+th { background:var(--card); }
+blockquote { margin:1em 0; padding:.6em 1em; border-left:4px solid var(--accent); background:var(--card); border-radius:0 8px 8px 0; }
+img { max-width:100%; }
+hr { border:0; border-top:1px solid var(--line); }
+</style>
+</head>
+<body><main>
+{{ content }}
+</main></body>
+</html>

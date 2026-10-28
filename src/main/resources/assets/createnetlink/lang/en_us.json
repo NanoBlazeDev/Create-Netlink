@@ -164,6 +164,7 @@
   "message.createnetlink.panel_going": "Going to %s",
   "message.createnetlink.panel_unreachable": "Floor %s can't be reached",
   "message.createnetlink.script_limit": "This network already has the maximum number of scripts",
+  "message.createnetlink.script_too_long": "Script is too long (max %s characters): not saved",
   "gui.createnetlink.elevator.title": "Advanced Elevator Pulley",
   "gui.createnetlink.elevator.name": "Name",
   "gui.createnetlink.elevator.outputs": "Outputs: <name>/Moving, /Up, /Down, /Target, /Floor, /Departed, /Arrived, /To/<floor>, /At/<floor>",

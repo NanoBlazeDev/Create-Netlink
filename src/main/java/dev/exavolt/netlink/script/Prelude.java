@@ -6,8 +6,8 @@ final class Prelude {
 	}
 
 	static final String LUA = """
-		local _connect, _disconnect, _wait = __connect, __disconnect, __wait
-		__connect, __disconnect, __wait = nil, nil, nil
+		local _connect, _disconnect, _wait, _channel = __connect, __disconnect, __wait, __channel
+		__connect, __disconnect, __wait, __channel = nil, nil, nil, nil
 
 		-- Roblox-style signal objects: event:Connect(fn), event:Once(fn), event:Wait()
 		local Connection = {}
@@ -40,7 +40,7 @@ final class Prelude {
 
 		-- signal.changed("Channel"):Connect(function(value, old) ... end)
 		function signal.changed(channel)
-			return event("signal:" .. tostring(channel))
+			return event("signal:" .. _channel(tostring(channel)))
 		end
 		signal.Changed = signal.changed
 
@@ -109,13 +109,22 @@ final class Prelude {
 			return ok, ...
 		end
 		function pcall(f, ...) return clean(_pcall(f, ...)) end
+		function xpcall(f, handler, ...)
+			return _xpcall(f, function(e)
+				if type(e) == "string" then e = e:gsub("%s+$", "") end
+				return handler(e)
+			end, ...)
+		end
 
 		-- Luau / Roblox standard library extras
 		function math.clamp(x, lo, hi)
 			if x < lo then return lo elseif x > hi then return hi end
 			return x
 		end
-		function math.round(x) return math.floor(x + 0.5) end
+		function math.round(x)
+			if x >= 0 then return math.floor(x + 0.5) end
+			return -math.floor(-x + 0.5)
+		end
 		function math.sign(x) return x > 0 and 1 or (x < 0 and -1 or 0) end
 		function string.split(s, sep)
 			sep = sep or ","

@@ -91,7 +91,16 @@ public final class Elevators {
 		String source = "elevator:" + d.key();
 		NetlinkServer.clearSources(source);
 		watches.remove(d.key());
-		NetlinkServer.putDevice(new DeviceRecord(d.kind, d.dimension, d.pos, owner, name.isBlank() ? "Elevator" : name, false, 0, d.face,
+		String base = name.isBlank() ? "Elevator" : name;
+		String unique = base;
+		for (int n = 2; ; n++) {
+			DeviceRecord other = find(owner, unique);
+			if (other == null || other.key().equals(d.key())) {
+				break;
+			}
+			unique = base + " " + n;
+		}
+		NetlinkServer.putDevice(new DeviceRecord(d.kind, d.dimension, d.pos, owner, unique, false, 0, d.face,
 			blockId()));
 	}
 

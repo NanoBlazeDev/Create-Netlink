@@ -103,6 +103,8 @@ public final class ScriptRuntime {
 	public static final int MAX_MAIN_CALLS = 4096;
 	/** Whether the network owner was an operator when the script started: unlocks the world API. */
 	public boolean op;
+	/** Player who wrote or started the code (null for old scripts): world access needs them to be an operator too. */
+	public @org.jetbrains.annotations.Nullable UUID author;
 
 	public final String id;
 	public final UUID owner;
@@ -317,7 +319,7 @@ public final class ScriptRuntime {
 		// run due tasks; handlers spawned during this pass run in the same tick
 		int guard = 0;
 		boolean ran = true;
-		while (ran && guard++ < 8 && !killed && tickRemaining > 0) {
+		while (ran && guard++ < 8 && !killed && tickRemaining >= BUDGET_PER_TICK) {
 			ran = false;
 			tasks.addAll(pending);
 			pending.clear();
@@ -325,6 +327,11 @@ public final class ScriptRuntime {
 				Task t = it.next();
 				if (t.waitingFor != null || t.resumeAt > ticks) {
 					continue;
+				}
+				// not enough of this tick's budget left for a full thread slice: let it run next tick instead of
+				// starting it with a crumb of budget and killing it with "timed out"
+				if (tickRemaining < BUDGET_PER_TICK) {
+					break;
 				}
 				ran = true;
 				resume(t);
@@ -336,7 +343,7 @@ public final class ScriptRuntime {
 		Varargs args = t.args == null ? LuaValue.NONE : t.args;
 		t.args = null;
 		Varargs r;
-		int given = Math.max(0, Math.min(BUDGET_PER_TICK, tickRemaining));
+		int given = BUDGET_PER_TICK;
 		budget.remaining = given;
 		try {
 			r = t.thread.resume(args);

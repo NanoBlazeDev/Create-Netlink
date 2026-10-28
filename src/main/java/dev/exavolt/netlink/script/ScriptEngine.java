@@ -25,6 +25,8 @@ public final class ScriptEngine {
 	public static final int MAX_CODE = 60_000;
 
 	private static final Map<String, ScriptRuntime> running = new LinkedHashMap<>();
+	/** Scripts whose last run hit an error: the editor shows them red after they stop. */
+	private static final java.util.Set<String> failed = new java.util.HashSet<>();
 	/** Console history survives restarts of a script (but not of the server). */
 	private static final Map<String, Deque<ScriptRuntime.LogLine>> logs = new HashMap<>();
 
@@ -49,14 +51,22 @@ public final class ScriptEngine {
 		}
 		running.clear();
 		logs.clear();
+		failed.clear();
 	}
 
 	public static void start(UUID owner, ScriptRecord r) {
 		stop(r.id, false);
+		failed.remove(r.id);
 		Deque<ScriptRuntime.LogLine> log = logs.computeIfAbsent(r.id, k -> ScriptRuntime.newLog());
 		ScriptRuntime rt = new ScriptRuntime(r.id, owner, r.name, log);
-		rt.op = WorldApi.isOp(owner);
-		rt.log(ScriptRuntime.Level.SYSTEM, "▶ started " + r.name + (rt.op ? "  (operator: world library on)" : ""));
+		try {
+			rt.author = r.author.isEmpty() ? null : UUID.fromString(r.author);
+		} catch (IllegalArgumentException e) {
+			rt.author = null;
+		}
+		rt.op = WorldApi.allowed(rt);
+		rt.log(ScriptRuntime.Level.SYSTEM, "▶ started " + r.name + (rt.op ? "  (operator: world library on)"
+			: WorldApi.isOp(owner) ? "  (world library off: the last editor is not an operator)" : ""));
 		running.put(r.id, rt);
 		if (!rt.load(r.code, new ScriptApi())) {
 			rt.log(ScriptRuntime.Level.SYSTEM, "■ not started: fix the error and press Run again");
@@ -70,6 +80,9 @@ public final class ScriptEngine {
 			return;
 		}
 		rt.kill();
+		if (rt.crashed) {
+			failed.add(id);
+		}
 		NetlinkServer.clearSources("script:" + id);
 		if (announce) {
 			rt.log(ScriptRuntime.Level.SYSTEM, "■ stopped");
@@ -82,7 +95,7 @@ public final class ScriptEngine {
 
 	public static boolean hasErrors(String id) {
 		ScriptRuntime rt = running.get(id);
-		return rt != null && rt.crashed;
+		return rt != null ? rt.crashed : failed.contains(id);
 	}
 
 	public static void clearLog(String id) {
@@ -108,6 +121,7 @@ public final class ScriptEngine {
 	public static void forget(String id) {
 		stop(id, false);
 		logs.remove(id);
+		failed.remove(id);
 	}
 
 	public static void tick() {

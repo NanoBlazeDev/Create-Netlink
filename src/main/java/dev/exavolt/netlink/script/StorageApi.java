@@ -78,6 +78,9 @@ final class StorageApi {
 
 	private static String number(LuaValue v) {
 		double d = v.todouble();
+		if (!Double.isFinite(d)) {
+			throw new LuaError("storage can't keep NaN or infinite numbers");
+		}
 		if (d == Math.rint(d) && Math.abs(d) < 1e15) {
 			return String.valueOf((long) d);
 		}
@@ -96,6 +99,9 @@ final class StorageApi {
 		}
 		if (v.isnumber() && !v.isstring()) {
 			double d = v.todouble();
+			if (!Double.isFinite(d)) {
+				throw new LuaError("storage can't keep NaN or infinite numbers");
+			}
 			return d == Math.rint(d) && Math.abs(d) < 1e15 ? new JsonPrimitive((long) d) : new JsonPrimitive(d);
 		}
 		if (v.isstring()) {
@@ -142,12 +148,24 @@ final class StorageApi {
 		String body = s.substring(2);
 		return switch (s.charAt(0)) {
 			case 'b' -> LuaValue.valueOf(Boolean.parseBoolean(body));
-			case 'n' -> body.contains(".") || body.contains("E") ? LuaValue.valueOf(Double.parseDouble(body))
-				: LuaValue.valueOf(Long.parseLong(body));
+			case 'n' -> decodeNumber(body);
 			case 's' -> LuaValue.valueOf(body);
 			case 't' -> lua(JsonParser.parseString(body));
 			default -> LuaValue.NIL;
 		};
+	}
+
+	/** Whole numbers come back as integers; anything else (including values saved by older versions) as a double. */
+	private static LuaValue decodeNumber(String body) {
+		try {
+			return LuaValue.valueOf(Long.parseLong(body));
+		} catch (NumberFormatException e) {
+			try {
+				return LuaValue.valueOf(Double.parseDouble(body));
+			} catch (NumberFormatException e2) {
+				return LuaValue.NIL;
+			}
+		}
 	}
 
 	private static LuaValue lua(JsonElement e) {

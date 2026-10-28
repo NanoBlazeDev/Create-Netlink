@@ -97,6 +97,8 @@ public final class ScriptApi {
 			return LuaValue.NONE;
 		}));
 		g.set("__wait", fn(a -> rt.waitEvent(a.checkjstring(1))));
+		// the same channel name clean-up signal.get/set use, so signal.changed(" Home/Door ") hears "Home/Door"
+		g.set("__channel", fn(a -> LuaValue.valueOf(channel(a.arg1()))));
 
 		// ---- signals on the script owner's network
 		LuaTable signal = new LuaTable();

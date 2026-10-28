@@ -1,0 +1,10 @@
+title: Create Netlink
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+exclude: [src, decor, gradle, gradlew, gradlew.bat, build.gradle, settings.gradle, gradle.properties, build, run, LICENSE]
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }

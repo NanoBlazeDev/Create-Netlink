@@ -162,19 +162,32 @@ public final class ScriptServer {
 		boolean withCode = false;
 		switch (p.action()) {
 			case NetlinkPackets.SCRIPT_SAVE, NetlinkPackets.SCRIPT_RUN -> {
-				String code = p.code().length() > NetlinkPackets.MAX_CODE ? p.code().substring(0, NetlinkPackets.MAX_CODE) : p.code();
+				if (p.code().length() > NetlinkPackets.MAX_CODE) {
+					player.sendOverlayMessage(Component.translatable("message.createnetlink.script_too_long", NetlinkPackets.MAX_CODE)
+						.withStyle(ChatFormatting.RED));
+					return;
+				}
+				String code = p.code();
 				if (r == null) {
 					if (scripts(owner).size() >= ScriptEngine.MAX_SCRIPTS_PER_NETWORK) {
 						player.sendOverlayMessage(Component.translatable("message.createnetlink.script_limit").withStyle(ChatFormatting.RED));
 						return;
 					}
 					r = new ScriptRecord(UUID.randomUUID().toString().substring(0, 8), cleanName(p.name()), code.isEmpty() ? EXAMPLE : code, false);
+					r.author = player.getUUID().toString();
 					scripts(owner).add(r);
 					selected = r.id;
 					withCode = true;
 				} else {
 					r.name = cleanName(p.name());
+					if (!r.code.equals(code)) {
+						r.author = player.getUUID().toString();
+					}
 					r.code = code;
+					if (p.action() == NetlinkPackets.SCRIPT_RUN && !player.getUUID().toString().equals(r.author)) {
+						// whoever presses Run takes responsibility: world access then needs them to be an operator too
+						r.author = player.getUUID().toString();
+					}
 				}
 				if (p.action() == NetlinkPackets.SCRIPT_RUN) {
 					r.enabled = true;

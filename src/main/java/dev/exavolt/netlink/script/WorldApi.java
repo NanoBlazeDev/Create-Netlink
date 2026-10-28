@@ -70,6 +70,11 @@ final class WorldApi {
 
 	private static final int MAX_FILL = 32768;
 
+	/** World access needs the network owner and the player who last edited or started the script to be operators. */
+	static boolean allowed(ScriptRuntime rt) {
+		return isOp(rt.owner) && (rt.author == null || rt.author.equals(rt.owner) || isOp(rt.author));
+	}
+
 	static boolean isOp(UUID owner) {
 		MinecraftServer server = NetlinkServer.server();
 		if (server == null) {
@@ -110,8 +115,8 @@ final class WorldApi {
 			@Override
 			public Varargs invoke(Varargs args) {
 				Supplier<Varargs> job = () -> {
-					if (!isOp(rt.owner)) {
-						throw new LuaError("the world library needs the network owner to be an operator");
+					if (!allowed(rt)) {
+						throw new LuaError("the world library needs the network owner and the script's last editor to be operators");
 					}
 					return body.apply(args);
 				};

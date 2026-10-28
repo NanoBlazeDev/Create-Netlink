@@ -1,3 +1,8 @@
+---
+title: Create Netlink Wiki
+permalink: /wiki/
+---
+
 # Create: Netlink — Wiki
 
 Wireless signal networks for Create: unlimited-range links, hidden bugs, a 3D keyboard, a network map, Luau scripting, limitless glue, folding walls and advanced elevators. Bundled with **Netlink: Decor**, a decoration add-on whose props react to your network.
@@ -180,7 +185,7 @@ Folds a glued shape into flat plates built into existing blocks. The shape slide
 
 Create's Elevator Pulley with a built-in Netlink device. Build the elevator exactly like a Create elevator: the pulley needs rotation, a cabin and Elevator Contacts on each floor. The pulley also announces itself on your network and can be driven by scripts.
 
-- Placing it registers it on your network as **Elevator1**, **Elevator2**…: "Elevator registered as … - rename it with H on". With **HUD on**, right-click it with an **empty hand** (not sneaking) to set **Network** and **Name**. `/` in the name is replaced by `_`. Keep names unique per network; scripts find elevators by name.
+- Placing it registers it on your network as **Elevator1**, **Elevator2**…: "Elevator registered as … - rename it with H on". With **HUD on**, right-click it with an **empty hand** (not sneaking) to set **Network** and **Name**. `/` in the name is replaced by `_`. Names are unique per network: a name that's taken gets a number added (`Lobby` → `Lobby 2`). Scripts find elevators by name.
 - **Floors** are the elevator's contacts, bottom to top. A floor's **name** is the contact's short name; a contact without one is named by its position counted from **0**. Its **label** is the contact's long name.
 
 **Network outputs** (all on the elevator's network, `<name>` = elevator name):
@@ -291,12 +296,12 @@ Enter keeps the indentation and indents after block openers. Like Roblox Studio,
 
 ### Operators and the `world` library
 
-- The **`world` library exists only if the network owner was an operator when the script started**. The console then shows `(operator: world library on)`. On a server this means the owner is in the ops list; in singleplayer it normally means commands (cheats) are allowed. If the owner becomes an operator later, press Run again.
-- Every `world` call checks again. If the owner is no longer an operator, calls fail with "the world library needs the network owner to be an operator".
+- The **`world` library exists only if the network owner and the player who last edited or started the script were both operators when it started**. The console then shows `(operator: world library on)`. On a server this means the owner is in the ops list; in singleplayer it normally means commands (cheats) are allowed. If the owner becomes an operator later, press Run again.
+- Every `world` call checks again. If the owner is no longer an operator, calls fail with "the world library needs the network owner and the script's last editor to be operators".
 - `world.run` and the command-based functions run **with the network owner's permission level**.
 - World events (`PlayerJoined`, `PlayerLeft`, `Chatted`) are delivered only to operator scripts. Every operator script on the server receives them.
 
-> **Admins:** authorized players can edit and run scripts on your network. If you are an operator, their scripts get the `world` library and run commands with your permissions. Authorize only players you trust with that.
+> **Admins:** authorized players can edit and run scripts on your network, but a script someone else last changed or started gets the `world` library only if that player is an operator too. Otherwise the console shows `(world library off: the last editor is not an operator)`.
 
 ### Language: Luau subset
 
@@ -332,7 +337,7 @@ Your code is converted from Luau to Lua 5.2 (run by LuaJ) with line numbers kept
 | Limit | Value |
 |---|---|
 | Scripts per network | **32** ("This network already has the maximum number of scripts") |
-| Script size | 60,000 characters (longer code is cut off when saved) |
+| Script size | 60,000 characters (the editor stops typing at the limit; longer code isn't saved) |
 | Instructions per thread per tick | 250,000 |
 | Instructions per script per tick (all threads together) | 1,000,000 |
 | Threads per script (running + scheduled) | 512 (extra event handler calls are dropped) |
@@ -343,7 +348,7 @@ Your code is converted from Luau to Lua 5.2 (run by LuaJ) with line numbers kept
 | `world.entitiesNear` / `removeEntities` radius | 256 blocks |
 | `storage` | 2000 keys per network, 65,536 characters per encoded value, tables nested up to 16 deep |
 
-Going over an instruction limit raises `script timed out: too much work in one tick (add task.wait() in long loops)` in the thread that hit it. Any long `while true do` loop needs a `task.wait()`.
+Going over an instruction limit raises `script timed out: too much work in one tick (add task.wait() in long loops)` in the thread that hit it. Any long `while true do` loop needs a `task.wait()`. Threads that are due after this tick's budget is used up simply run next tick.
 
 ### API reference
 
@@ -441,7 +446,7 @@ Writable values are clamped to their range and saved with the world. The effecti
 
 #### storage: saved data
 
-Values survive server restarts and are **shared by all scripts of the network**. Numbers, strings, booleans and tables of those can be saved. Metatables and functions can't.
+Values survive server restarts and are **shared by all scripts of the network**. Numbers, strings, booleans and tables of those can be saved. Metatables, functions, NaN and infinity can't (`set` raises an error).
 
 | Function | Returns | Notes |
 |---|---|---|
@@ -458,7 +463,7 @@ Values survive server restarts and are **shared by all scripts of the network**.
 | Function | Notes |
 |---|---|
 | `math.clamp(x, lo, hi)` | |
-| `math.round(x)` | `math.floor(x + 0.5)` |
+| `math.round(x)` | Nearest integer, halves away from zero (`math.round(-2.5)` = -3), like Luau |
 | `math.sign(x)` | −1, 0 or 1 |
 | `string.split(s, sep?)` | Plain-text separator, default `","`; `""` splits into characters. Also works as `s:split(sep)`. |
 | `table.find(t, value, init?)` | Index or `nil`. |
@@ -757,7 +762,7 @@ The device, keyboard or script belongs to someone else. Ask them for `/network a
 A loop ran too long without yielding. Add `task.wait()` inside long loops (limits are in [Limits](#limits)).
 
 **`world` is nil in my script.**
-The network owner wasn't an operator when the script started. Make them an operator and press **Run** again.
+The network owner (and the player who last edited the script) wasn't an operator when the script started. Make them operators and press **Run** again.
 
 **`lift:GetFloors()` is empty / `lift:GoTo` does nothing.**
 The cabin isn't assembled or the pulley's chunk isn't loaded. An elevator in an unloaded chunk still exists for scripts, with `Assembled = false`. Wait for `lift.Assembled` before reading floors.
