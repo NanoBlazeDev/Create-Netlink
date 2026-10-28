@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "netlinkdecor:block/patch_panel"
+    },
+    "facing=east": {
+      "model": "netlinkdecor:block/patch_panel",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "netlinkdecor:block/patch_panel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "netlinkdecor:block/patch_panel",
+      "y": 270
+    }
+  }
+}

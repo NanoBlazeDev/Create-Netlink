@@ -1,0 +1,7 @@
+{
+  "parent": "create:block/elevator_pulley/item",
+  "textures": {
+    "0": "createnetlink:block/advanced_elevator_pulley",
+    "particle": "createnetlink:block/advanced_elevator_pulley"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "create:super_glue",
+    "minecraft:ender_pearl",
+    "create:electron_tube"
+  ],
+  "result": {
+    "id": "createnetlink:netlink_glue",
+    "count": 1
+  }
+}

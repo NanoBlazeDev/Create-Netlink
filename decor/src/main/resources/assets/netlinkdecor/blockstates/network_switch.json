@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "netlinkdecor:block/network_switch"
+    },
+    "facing=east": {
+      "model": "netlinkdecor:block/network_switch",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "netlinkdecor:block/network_switch",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "netlinkdecor:block/network_switch",
+      "y": 270
+    }
+  }
+}

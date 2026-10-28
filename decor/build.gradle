@@ -1,0 +1,65 @@
+plugins {
+	id "net.fabricmc.fabric-loom"
+}
+
+// Netlink: Decor is built here, against Netlink's own classes, and shipped inside the Netlink jar (one jar, two mods)
+evaluationDependsOn(":")
+
+version = "${project.mod_version}+${project.minecraft_version}"
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	mavenCentral()
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
+}
+
+loom {
+	splitEnvironmentSourceSets()
+	mods {
+		netlinkdecor {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	implementation "maven.modrinth:create-fly:${project.create_fly_version}"
+	// Create: Netlink straight from the parent project's compiled classes
+	implementation rootProject.sourceSets.main.output
+	clientImplementation rootProject.sourceSets.client.output
+}
+
+processResources {
+	inputs.property "version", project.version
+	filesMatching("fabric.mod.json") {
+		expand "version": inputs.properties.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+	it.options.encoding = "UTF-8"
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "netlinkdecor:block/server_rack"
+    },
+    "facing=east": {
+      "model": "netlinkdecor:block/server_rack",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "netlinkdecor:block/server_rack",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "netlinkdecor:block/server_rack",
+      "y": 270
+    }
+  }
+}

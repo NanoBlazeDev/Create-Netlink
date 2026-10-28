@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    " E ",
+    "TLT"
+  ],
+  "key": {
+    "E": "minecraft:ender_pearl",
+    "T": "create:electron_tube",
+    "L": "create:redstone_link"
+  },
+  "result": {
+    "id": "createnetlink:advanced_redstone_link",
+    "count": 1
+  }
+}

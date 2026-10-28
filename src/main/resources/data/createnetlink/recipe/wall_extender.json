@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    " T ",
+    "IPI"
+  ],
+  "key": {
+    "T": "create:electron_tube",
+    "I": "create:iron_sheet",
+    "P": "create:mechanical_piston"
+  },
+  "result": {
+    "id": "createnetlink:wall_extender",
+    "count": 4
+  }
+}

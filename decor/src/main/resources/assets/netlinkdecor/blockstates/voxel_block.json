@@ -1,0 +1,388 @@
+{
+  "variants": {
+    "facing=north,light=0,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=0,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=1,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=1,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=2,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=2,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=3,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=3,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=4,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=4,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=5,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=5,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=6,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=6,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=7,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=7,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=8,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=8,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=9,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=9,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=10,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=10,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=11,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=11,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=12,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=12,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=13,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=13,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=14,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=14,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=15,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=north,light=15,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=0,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=0,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=1,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=1,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=2,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=2,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=3,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=3,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=4,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=4,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=5,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=5,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=6,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=6,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=7,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=7,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=8,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=8,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=9,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=9,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=10,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=10,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=11,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=11,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=12,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=12,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=13,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=13,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=14,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=14,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=15,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=east,light=15,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=0,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=0,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=1,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=1,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=2,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=2,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=3,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=3,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=4,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=4,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=5,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=5,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=6,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=6,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=7,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=7,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=8,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=8,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=9,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=9,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=10,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=10,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=11,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=11,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=12,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=12,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=13,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=13,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=14,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=14,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=15,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=south,light=15,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=0,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=0,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=1,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=1,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=2,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=2,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=3,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=3,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=4,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=4,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=5,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=5,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=6,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=6,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=7,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=7,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=8,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=8,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=9,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=9,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=10,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=10,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=11,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=11,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=12,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=12,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=13,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=13,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=14,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=14,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=15,mirrored=true": {
+      "model": "netlinkdecor:block/voxel_block"
+    },
+    "facing=west,light=15,mirrored=false": {
+      "model": "netlinkdecor:block/voxel_block"
+    }
+  }
+}

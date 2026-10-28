@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "netlinkdecor:block/neon_panel_brown"
+    },
+    "facing=down": {
+      "model": "netlinkdecor:block/neon_panel_brown",
+      "x": 180
+    },
+    "facing=north": {
+      "model": "netlinkdecor:block/neon_panel_brown",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "netlinkdecor:block/neon_panel_brown",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "netlinkdecor:block/neon_panel_brown",
+      "x": 90,
+      "y": 270
+    },
+    "facing=east": {
+      "model": "netlinkdecor:block/neon_panel_brown",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

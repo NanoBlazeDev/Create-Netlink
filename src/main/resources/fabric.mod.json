@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "createnetlink",
+  "version": "${version}",
+  "name": "Create: Netlink",
+  "description": "Wireless signal networks for Create: unlimited-range links, hidden bugs, a 3D keyboard, a network map, Luau scripting, limitless glue, folding walls and advanced elevators.",
+  "authors": [
+    "ExaVolt",
+    "Claude"
+  ],
+  "license": "All-Rights-Reserved",
+  "icon": {
+    "128": "assets/createnetlink/logo_128.png",
+    "256": "assets/createnetlink/logo.png"
+  },
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.exavolt.netlink.Netlink"
+    ],
+    "client": [
+      "dev.exavolt.netlink.client.NetlinkClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.2",
+    "minecraft": ">=26.1- <26.2-",
+    "java": ">=25",
+    "fabric-api": "*",
+    "create": ">=6.0.9-0"
+  },
+  "mixins": [
+    "createnetlink.mixins.json"
+  ],
+  "contact": {}
+}

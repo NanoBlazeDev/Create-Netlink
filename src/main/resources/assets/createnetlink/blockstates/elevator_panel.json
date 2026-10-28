@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "createnetlink:block/elevator_panel"
+    },
+    "facing=east": {
+      "model": "createnetlink:block/elevator_panel",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "createnetlink:block/elevator_panel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createnetlink:block/elevator_panel",
+      "y": 270
+    }
+  }
+}

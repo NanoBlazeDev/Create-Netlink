@@ -1,0 +1,68 @@
+plugins {
+	id "net.fabricmc.fabric-loom" version "${loom_version}"
+}
+
+version = "${project.mod_version}+${project.minecraft_version}"
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	mavenCentral()
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
+}
+
+loom {
+	splitEnvironmentSourceSets()
+	mods {
+		createnetlink {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	implementation "maven.modrinth:create-fly:${project.create_fly_version}"
+	// Lua VM for Netlink scripts (Luau is transpiled to Lua 5.2), shipped inside the mod jar
+	implementation "org.luaj:luaj-jse:3.0.1"
+	include "org.luaj:luaj-jse:3.0.1"
+	// Netlink: Decor ships inside this jar as a nested mod
+	include project(":decor")
+}
+
+processResources {
+	inputs.property "version", project.version
+	filesMatching("fabric.mod.json") {
+		expand "version": inputs.properties.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+	it.options.encoding = "UTF-8"
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+jar {
+	from("LICENSE")
+}

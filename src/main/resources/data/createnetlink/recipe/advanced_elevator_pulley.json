@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    "create:elevator_pulley",
+    "create:electron_tube",
+    "minecraft:ender_pearl"
+  ],
+  "result": {
+    "id": "createnetlink:advanced_elevator_pulley",
+    "count": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "createnetlink:block/advanced_elevator_pulley"
+    },
+    "facing=east": {
+      "model": "createnetlink:block/advanced_elevator_pulley",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "createnetlink:block/advanced_elevator_pulley",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createnetlink:block/advanced_elevator_pulley",
+      "y": 270
+    }
+  }
+}

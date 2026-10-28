@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "G",
+    "T",
+    "B"
+  ],
+  "key": {
+    "G": "minecraft:glass_pane",
+    "T": "create:electron_tube",
+    "B": "create:brass_sheet"
+  },
+  "result": {
+    "id": "createnetlink:elevator_panel",
+    "count": 1
+  }
+}

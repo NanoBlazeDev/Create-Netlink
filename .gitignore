@@ -1,0 +1,22 @@
+# Gradle / Loom
+.gradle/
+build/
+decor/build/
+out/
+run/
+*.log
+build_log.txt
+gensrc_log.txt
+run_log.txt
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# local decompiled references and scratch
+_ref/
+*.zip

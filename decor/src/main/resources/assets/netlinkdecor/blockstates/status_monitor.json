@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "netlinkdecor:block/status_monitor"
+    },
+    "facing=east": {
+      "model": "netlinkdecor:block/status_monitor",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "netlinkdecor:block/status_monitor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "netlinkdecor:block/status_monitor",
+      "y": 270
+    }
+  }
+}

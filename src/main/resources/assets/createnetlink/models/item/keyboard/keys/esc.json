@@ -1,0 +1,67 @@
+{
+ "textures": {
+  "particle": "createnetlink:item/keyboard_keys",
+  "keys": "createnetlink:item/keyboard_keys"
+ },
+ "elements": [
+  {
+   "from": [
+    0.67,
+    8.2,
+    5.27
+   ],
+   "to": [
+    1.341,
+    8.9,
+    5.941
+   ],
+   "faces": {
+    "up": {
+     "uv": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "texture": "#keys"
+    },
+    "north": {
+     "uv": [
+      1.0,
+      7.0,
+      2.0,
+      7.375
+     ],
+     "texture": "#keys"
+    },
+    "south": {
+     "uv": [
+      1.0,
+      7.0,
+      2.0,
+      7.375
+     ],
+     "texture": "#keys"
+    },
+    "east": {
+     "uv": [
+      1.0,
+      7.0,
+      1.375,
+      7.375
+     ],
+     "texture": "#keys"
+    },
+    "west": {
+     "uv": [
+      1.0,
+      7.0,
+      1.375,
+      7.375
+     ],
+     "texture": "#keys"
+    }
+   }
+  }
+ ]
+}

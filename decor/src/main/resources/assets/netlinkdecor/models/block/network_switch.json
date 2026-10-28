@@ -1,0 +1,44 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "front": "netlinkdecor:block/switch_front",
+    "top": "netlinkdecor:block/switch_top",
+    "steel": "netlinkdecor:block/steel",
+    "particle": "netlinkdecor:block/steel"
+  },
+  "elements": [
+    {
+      "from": [
+        1,
+        0,
+        2
+      ],
+      "to": [
+        15,
+        4,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#front"
+        },
+        "south": {
+          "texture": "#steel"
+        },
+        "east": {
+          "texture": "#steel"
+        },
+        "west": {
+          "texture": "#steel"
+        },
+        "up": {
+          "texture": "#top"
+        },
+        "down": {
+          "texture": "#steel",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}

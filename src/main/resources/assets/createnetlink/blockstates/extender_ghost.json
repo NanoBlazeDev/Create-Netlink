@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "createnetlink:block/extender_ghost"
+    }
+  }
+}

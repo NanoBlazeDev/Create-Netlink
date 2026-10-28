@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "createnetlink:block/wall_extender"
+    },
+    "facing=down": {
+      "model": "createnetlink:block/wall_extender",
+      "x": 180
+    },
+    "facing=north": {
+      "model": "createnetlink:block/wall_extender",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "createnetlink:block/wall_extender",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createnetlink:block/wall_extender",
+      "x": 90,
+      "y": 270
+    },
+    "facing=east": {
+      "model": "createnetlink:block/wall_extender",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "textures": {
+    "body": "createnetlink:block/elevator_panel_body",
+    "bezel": "createnetlink:block/elevator_panel_bezel",
+    "screen": "createnetlink:block/elevator_panel_screen",
+    "keys": "createnetlink:block/elevator_panel_keys",
+    "particle": "createnetlink:block/elevator_panel_body"
+  },
+  "elements": [
+    {
+      "from": [
+        9.6,
+        0.6,
+        13.0
+      ],
+      "to": [
+        12.4,
+        2.5,
+        14.0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            3.0,
+            4.0,
+            6.0,
+            6.0
+          ],
+          "texture": "#keys"
+        },
+        "east": {
+          "uv": [
+            0,
+            10,
+            3,
+            11
+          ],
+          "texture": "#keys"
+        },
+        "west": {
+          "uv": [
+            0,
+            10,
+            3,
+            11
+          ],
+          "texture": "#keys"
+        },
+        "up": {
+          "uv": [
+            0,
+            10,
+            3,
+            11
+          ],
+          "texture": "#keys"
+        },
+        "down": {
+          "uv": [
+            0,
+            10,
+            3,
+            11
+          ],
+          "texture": "#keys"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "steel": "netlinkdecor:block/steel",
+    "particle": "netlinkdecor:block/steel"
+  },
+  "elements": []
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    " E ",
+    "TCT",
+    "BBB"
+  ],
+  "key": {
+    "E": "minecraft:ender_pearl",
+    "T": "create:electron_tube",
+    "C": "create:linked_controller",
+    "B": "create:brass_sheet"
+  },
+  "result": {
+    "id": "createnetlink:keyboard",
+    "count": 1
+  }
+}

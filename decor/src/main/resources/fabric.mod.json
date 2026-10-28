@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "netlinkdecor",
+  "version": "${version}",
+  "name": "Netlink: Decor",
+  "description": "Decorations for Create: Netlink: server racks, switches, routers, dishes and masts that react to your network, neon in every color, and a voxel chisel for high-resolution sculpting.",
+  "authors": [
+    "ExaVolt",
+    "Claude"
+  ],
+  "license": "All-Rights-Reserved",
+  "icon": {
+    "128": "assets/netlinkdecor/logo_128.png",
+    "256": "assets/netlinkdecor/logo.png"
+  },
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.exavolt.netlinkdecor.NetlinkDecor"
+    ],
+    "client": [
+      "dev.exavolt.netlinkdecor.client.DecorClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.2",
+    "minecraft": ">=26.1- <26.2-",
+    "java": ">=25",
+    "fabric-api": "*",
+    "create": ">=6.0.9-0",
+    "createnetlink": ">=1.0.0"
+  }
+}

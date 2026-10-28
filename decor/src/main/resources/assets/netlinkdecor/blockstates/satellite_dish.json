@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "netlinkdecor:block/satellite_dish"
+    },
+    "facing=east": {
+      "model": "netlinkdecor:block/satellite_dish",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "netlinkdecor:block/satellite_dish",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "netlinkdecor:block/satellite_dish",
+      "y": 270
+    }
+  }
+}

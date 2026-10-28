@@ -1,0 +1,45 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "side": "netlinkdecor:block/duct_side",
+    "end": "netlinkdecor:block/duct_end",
+    "steel": "netlinkdecor:block/steel",
+    "particle": "netlinkdecor:block/steel"
+  },
+  "elements": [
+    {
+      "from": [
+        3,
+        0,
+        3
+      ],
+      "to": [
+        13,
+        16,
+        13
+      ],
+      "faces": {
+        "north": {
+          "texture": "#side"
+        },
+        "south": {
+          "texture": "#side"
+        },
+        "east": {
+          "texture": "#side"
+        },
+        "west": {
+          "texture": "#side"
+        },
+        "up": {
+          "texture": "#end",
+          "cullface": "up"
+        },
+        "down": {
+          "texture": "#end",
+          "cullface": "down"
+        }
+      }
+    }
+  ]
+}

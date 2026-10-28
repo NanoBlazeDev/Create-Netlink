@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=north,top=true": {
+      "model": "netlinkdecor:block/antenna_mast_top"
+    },
+    "facing=north,top=false": {
+      "model": "netlinkdecor:block/antenna_mast"
+    },
+    "facing=east,top=true": {
+      "model": "netlinkdecor:block/antenna_mast_top"
+    },
+    "facing=east,top=false": {
+      "model": "netlinkdecor:block/antenna_mast"
+    },
+    "facing=south,top=true": {
+      "model": "netlinkdecor:block/antenna_mast_top"
+    },
+    "facing=south,top=false": {
+      "model": "netlinkdecor:block/antenna_mast"
+    },
+    "facing=west,top=true": {
+      "model": "netlinkdecor:block/antenna_mast_top"
+    },
+    "facing=west,top=false": {
+      "model": "netlinkdecor:block/antenna_mast"
+    }
+  }
+}

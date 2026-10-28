@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    " T ",
+    "NRN",
+    " N "
+  ],
+  "key": {
+    "T": "create:electron_tube",
+    "N": "create:brass_nugget",
+    "R": "minecraft:redstone"
+  },
+  "result": {
+    "id": "createnetlink:bug",
+    "count": 2
+  }
+}

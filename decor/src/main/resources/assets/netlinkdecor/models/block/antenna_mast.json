@@ -1,0 +1,114 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "lat": "netlinkdecor:block/mast_lattice",
+    "steel": "netlinkdecor:block/steel",
+    "particle": "netlinkdecor:block/steel"
+  },
+  "elements": [
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        4
+      ],
+      "faces": {
+        "north": {
+          "texture": "#lat"
+        },
+        "south": {
+          "texture": "#lat"
+        },
+        "east": {
+          "texture": "#lat"
+        },
+        "west": {
+          "texture": "#lat"
+        }
+      }
+    },
+    {
+      "from": [
+        4,
+        0,
+        12
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#lat"
+        },
+        "south": {
+          "texture": "#lat"
+        },
+        "east": {
+          "texture": "#lat"
+        },
+        "west": {
+          "texture": "#lat"
+        }
+      }
+    },
+    {
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        4,
+        16,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#lat"
+        },
+        "south": {
+          "texture": "#lat"
+        },
+        "east": {
+          "texture": "#lat"
+        },
+        "west": {
+          "texture": "#lat"
+        }
+      }
+    },
+    {
+      "from": [
+        12,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        16,
+        12
+      ],
+      "faces": {
+        "north": {
+          "texture": "#lat"
+        },
+        "south": {
+          "texture": "#lat"
+        },
+        "east": {
+          "texture": "#lat"
+        },
+        "west": {
+          "texture": "#lat"
+        }
+      }
+    }
+  ]
+}

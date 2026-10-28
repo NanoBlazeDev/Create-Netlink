@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "netlinkdecor:block/cable_duct"
+    },
+    "axis=x": {
+      "model": "netlinkdecor:block/cable_duct",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z": {
+      "model": "netlinkdecor:block/cable_duct",
+      "x": 90
+    }
+  }
+}

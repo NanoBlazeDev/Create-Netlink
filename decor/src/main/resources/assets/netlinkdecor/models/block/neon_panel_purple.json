@@ -1,0 +1,73 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "glow": "netlinkdecor:block/neon_purple",
+    "rim": "netlinkdecor:block/neon_rim",
+    "particle": "netlinkdecor:block/neon_purple"
+  },
+  "elements": [
+    {
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        1,
+        15
+      ],
+      "faces": {
+        "down": {
+          "texture": "#rim",
+          "cullface": "down"
+        },
+        "north": {
+          "texture": "#rim"
+        },
+        "south": {
+          "texture": "#rim"
+        },
+        "east": {
+          "texture": "#rim"
+        },
+        "west": {
+          "texture": "#rim"
+        },
+        "up": {
+          "texture": "#rim"
+        }
+      }
+    },
+    {
+      "from": [
+        2,
+        1,
+        2
+      ],
+      "to": [
+        14,
+        1.6,
+        14
+      ],
+      "light_emission": 15,
+      "faces": {
+        "up": {
+          "texture": "#glow"
+        },
+        "north": {
+          "texture": "#glow"
+        },
+        "south": {
+          "texture": "#glow"
+        },
+        "east": {
+          "texture": "#glow"
+        },
+        "west": {
+          "texture": "#glow"
+        }
+      }
+    }
+  ]
+}

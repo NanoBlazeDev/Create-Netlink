@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "netlinkdecor:block/router"
+    },
+    "facing=east": {
+      "model": "netlinkdecor:block/router",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "netlinkdecor:block/router",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "netlinkdecor:block/router",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "createnetlink:block/advanced_redstone_link/transmitter"
+  }
+}
