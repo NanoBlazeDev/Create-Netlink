@@ -28,6 +28,6 @@
     "java": ">=25",
     "fabric-api": "*",
     "create": ">=6.0.9-0",
-    "createnetlink": ">=1.0.0"
+    "createnetlink": ">=0.1.0-0"
   }
 }
