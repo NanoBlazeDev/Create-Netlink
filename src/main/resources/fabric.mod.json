@@ -8,7 +8,7 @@
     "ExaVolt",
     "Claude"
   ],
-  "license": "All-Rights-Reserved",
+  "license": "MIT",
   "icon": {
     "128": "assets/createnetlink/logo_128.png",
     "256": "assets/createnetlink/logo.png"
