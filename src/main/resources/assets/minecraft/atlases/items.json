@@ -1,0 +1,10 @@
+{
+  "sources": [
+    {
+      "type": "createnetlink:recolor",
+      "source": "create:item/super_glue",
+      "sprite": "createnetlink:item/netlink_glue",
+      "palette": "createnetlink:recolor/netlink_glue_palette"
+    }
+  ]
+}

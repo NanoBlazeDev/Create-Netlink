@@ -35,6 +35,7 @@ public class NetlinkClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
+		RecolorSprites.register();
 		HUD_KEY = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.createnetlink.hud", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_H, CATEGORY));
 		MAP_KEY = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.createnetlink.map", InputConstants.Type.KEYSYM, GLFW.GLFW_KEY_N, CATEGORY));
 

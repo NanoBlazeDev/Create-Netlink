@@ -1,6 +1,27 @@
-MIT License
-
+Create: Netlink and Netlink: Decor
 Copyright (c) 2026 NanoBlaze
+
+=== Assets: All Rights Reserved ===
+
+This applies to every file under:
+
+- src/main/resources/assets/
+- decor/src/main/resources/assets/
+
+(textures, models, block states, sounds, language files and other assets).
+You may not copy, redistribute or modify these files without permission.
+
+Note: a few Netlink sprites are built at load time from Create's own textures
+(see assets/minecraft/atlases/*.json, sprite source "createnetlink:recolor").
+Those Create textures are not included in this project; they are read from
+the player's own copy of Create, which is All Rights Reserved by
+The Creators of Create. Files in assets/createnetlink/textures/recolor/ hold
+only colour tables and Netlink's own extra pixels.
+
+=== Code: MIT License ===
+
+All other files (Java sources, build scripts, and so on) are licensed under
+the MIT License:
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

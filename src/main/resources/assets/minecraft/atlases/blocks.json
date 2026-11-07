@@ -1,0 +1,54 @@
+{
+  "sources": [
+    {
+      "type": "createnetlink:recolor",
+      "source": "create:block/elevator_pulley",
+      "sprite": "createnetlink:block/advanced_elevator_pulley",
+      "palette": "createnetlink:recolor/advanced_elevator_pulley_palette"
+    },
+    {
+      "type": "createnetlink:recolor",
+      "source": "create:block/industrial_iron_block_top",
+      "sprite": "createnetlink:block/wall_extender_bottom"
+    },
+    {
+      "type": "createnetlink:recolor",
+      "source": "create:block/industrial_iron_block",
+      "sprite": "createnetlink:block/wall_extender_side",
+      "overlay": "createnetlink:recolor/wall_extender_side_overlay"
+    },
+    {
+      "type": "createnetlink:recolor",
+      "source": "create:block/chute_hole",
+      "sprite": "createnetlink:block/wall_extender_slot",
+      "palette": "createnetlink:recolor/wall_extender_slot_palette",
+      "overlay": "createnetlink:recolor/wall_extender_slot_overlay"
+    },
+    {
+      "type": "createnetlink:recolor",
+      "source": "create:block/redstone_antenna",
+      "sprite": "createnetlink:block/advanced_antenna",
+      "palette": "createnetlink:recolor/advanced_antenna_palette"
+    },
+    {
+      "type": "createnetlink:recolor",
+      "source": "create:block/redstone_antenna_powered",
+      "sprite": "createnetlink:block/advanced_antenna_powered",
+      "palette": "createnetlink:recolor/advanced_antenna_powered_palette"
+    },
+    {
+      "type": "createnetlink:recolor",
+      "source": "create:block/redstone_bridge",
+      "sprite": "createnetlink:block/advanced_redstone_link",
+      "palette": "createnetlink:recolor/advanced_redstone_link_palette",
+      "overlay": "createnetlink:recolor/advanced_redstone_link_overlay"
+    },
+    {
+      "type": "createnetlink:recolor",
+      "source": "create:block/redstone_bridge_powered",
+      "sprite": "createnetlink:block/advanced_redstone_link_powered",
+      "palette": "createnetlink:recolor/advanced_redstone_link_powered_palette",
+      "overlay": "createnetlink:recolor/advanced_redstone_link_powered_overlay"
+    }
+  ]
+}
